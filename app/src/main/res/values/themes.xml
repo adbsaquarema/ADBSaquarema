@@ -1,9 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ADBSaquarema" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ADBSaquarema" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="windowActionBar">false</item>
+
+        <!-- Remover qualquer título de janela -->
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.ADBSaquarema" parent="Base.Theme.ADBSaquarema" />
+
 </resources>
+
