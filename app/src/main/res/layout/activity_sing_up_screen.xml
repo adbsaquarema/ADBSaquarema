@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.MainActivity"
-    android:background="@color/black">
-
-    <ImageView
+    tools:context=".UI.SingUpScreen">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/logoabd"
-        android:padding="110dp"/>
+        android:text="SING UP ACTIVITY"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

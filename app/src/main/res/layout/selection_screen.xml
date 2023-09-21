@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.SelectionScreen"
+    android:background="@drawable/bgapp">
+
+    <ImageView
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logoabd" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:text="Ministério &#10;ADB Saquarema"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="34dp"
+        android:lineSpacingExtra="-10sp"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/view"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:text="Agora na palma da sua mão!"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:lineSpacingExtra="-10sp"
+        android:fontFamily="@font/poppins_light"/>
+    <Button
+        android:id="@+id/btnSingUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:backgroundTint="@color/yellow"
+        android:background="@drawable/button_round"
+        android:text="CRIAR CONTA"
+        android:fontFamily="@font/poppins_bold"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        />
+    <Button
+        android:id="@+id/btnSingIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/button_round"
+        android:fontFamily="@font/poppins_bold"
+        android:text="LOGIN"
+        android:textStyle="bold"
+
+        android:textSize="22sp"
+        />
+<TextView
+    android:id="@+id/acssesnotlogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Acessar sem Login."
+    android:textColor="@color/tvFinal"
+    android:layout_marginTop="15dp"
+    android:gravity="center"
+    android:textSize="18dp"
+    android:fontFamily="@font/poppins_medium"
+
+    />
+
+
+</LinearLayout>
