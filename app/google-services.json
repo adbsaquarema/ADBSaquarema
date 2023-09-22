@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "78105633984",
+    "project_id": "adb-saquarema",
+    "storage_bucket": "adb-saquarema.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78105633984:android:d2efa6d9cda4e3bdbe3925",
+        "android_client_info": {
+          "package_name": "com.example.adbsaquarema"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRaMhCWWUlNzZD1jDC7mOvgyGMoHoJYic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
