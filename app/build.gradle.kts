@@ -35,7 +35,7 @@ android {
         jvmTarget = "1.8"
     }
 
-    viewBinding{
+    viewBinding {
 
         enable = true
 
@@ -68,8 +68,17 @@ dependencies {
     // TODO: Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics-ktx")
-
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
 
 //FireBase Authenticator
- implementation   ("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    //Firebase Firestore
+    implementation("com.google.firebase:firebase-firestore-ktx")
+
 }
+
+
+
+
+
