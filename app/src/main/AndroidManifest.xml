@@ -50,9 +50,7 @@
         <activity
             android:name=".ServicesUi.Account"
             android:exported="false" />
-        <activity
-            android:name=".UI.ServicesActivities.account"
-            android:exported="false" />
+
         <activity
             android:name=".UI.ForgotPassword"
             android:exported="false" />

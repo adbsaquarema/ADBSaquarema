@@ -15,7 +15,8 @@ data class Users(
             "telephone" to telephone,
             "Membro" to Membro,
             "Visitante" to Visitante,
-            "Voluntário" to Voluntário
+            "Voluntário" to Voluntário,
+
         )
     }
 }
