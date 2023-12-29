@@ -8,9 +8,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logoabd"
+        android:icon="@mipmap/ic_adbsaquarema"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logoabd"
+        android:roundIcon="@mipmap/ic_adbsaquarema"
         android:supportsRtl="true"
         android:theme="@style/Theme.ADBSaquarema"
         tools:targetApi="31">
