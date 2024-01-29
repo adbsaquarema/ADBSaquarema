@@ -7,10 +7,12 @@ import android.os.Bundle
 import com.example.adbsaquarema.R
 import com.example.adbsaquarema.UI.LoginScreen
 import com.example.adbsaquarema.databinding.ActivitySettingsBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class Settings : AppCompatActivity() {
 
     private lateinit var binding: ActivitySettingsBinding
+
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,7 @@ class Settings : AppCompatActivity() {
 
 
             startLoginActivity()
+            FirebaseAuth.getInstance().signOut()
 
         }
 

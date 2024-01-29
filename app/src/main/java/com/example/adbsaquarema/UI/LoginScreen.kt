@@ -1,71 +1,55 @@
 package com.example.adbsaquarema.UI
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.CheckBox
+import android.view.View
+import android.widget.Toast
+import androidx.activity.viewModels
+import com.example.adbsaquarema.Listenners.AuthListeners
+import com.example.adbsaquarema.ViewModel.AuthViewModel
 import com.example.adbsaquarema.databinding.ActivityLoginScreenBinding
-import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.FirebaseNetworkException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthInvalidUserException
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginScreen : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginScreenBinding
-    private val auth = FirebaseAuth.getInstance()
-
+    private val viewModel: AuthViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val keepLoggedInCheckBox: CheckBox = binding.chackbox
-
-
-
-
         binding.btnToEnter.setOnClickListener { view ->
             val email = binding.edtEmaillogin.text.toString()
             val password = binding.edtLoginPassword.text.toString()
 
-            if (email.isEmpty() || password.isEmpty()) {
-                val snackbar =
-                    Snackbar.make(view, "Preencha todos os campos", Snackbar.LENGTH_SHORT)
-                snackbar.setBackgroundTint(Color.RED)
-                snackbar.show()
-            } else {
-                auth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener { autentic ->
-                        if (autentic.isSuccessful) {
-                            if (keepLoggedInCheckBox.isChecked) {
+            viewModel.loginUser(email, password, object : AuthListeners {
+                override fun onSuccess(mensage: String, screen: String) {
 
-                                auth.currentUser?.getIdToken(true)
+                    Toast.makeText(applicationContext, mensage, Toast.LENGTH_SHORT).show()
+                    binding.progressBar.visibility = View.VISIBLE
+                    startHomeActivity()
 
-                            }
-                            startHomeActivity()
-                        }
-                    }
-                    .addOnFailureListener { exception ->
-                        val errorMessage = when (exception) {
-                            is FirebaseAuthInvalidCredentialsException -> "Senha inválida."
-                            is FirebaseAuthInvalidUserException -> "E-mail inválido."
-                            is FirebaseNetworkException -> "Sem conexão com a internet."
-                            else -> "Erro de servidor."
-                        }
-                        val snackbar =
-                            Snackbar.make(view, errorMessage, Snackbar.LENGTH_SHORT)
-                        snackbar.setBackgroundTint(Color.RED)
-                        snackbar.show()
-                    }
-            }
+
+                }
+
+                override fun onFailure(error: String) {
+
+                    Toast.makeText(applicationContext, error, Toast.LENGTH_SHORT).show()
+
+                }
+            })
+
+
         }
 
         binding.tvEsqueciasenha.setOnClickListener {
+
             startForgotPasswordActivity()
+
         }
     }
 

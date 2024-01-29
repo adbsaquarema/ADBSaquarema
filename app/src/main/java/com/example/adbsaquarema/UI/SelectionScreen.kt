@@ -20,6 +20,8 @@ class SelectionScreen : AppCompatActivity() {
 
 
             startSingUpActivity()
+           
+
 
         }
 
