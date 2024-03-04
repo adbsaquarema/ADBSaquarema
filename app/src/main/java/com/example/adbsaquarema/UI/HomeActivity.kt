@@ -73,7 +73,7 @@ class HomeActivity : AppCompatActivity() {
 
 
 
-
+//teste
         binding.Count.setOnClickListener {
 
             startAcountActivity()
